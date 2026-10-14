@@ -1,1 +1,33 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEDナビ - 最寄りAEDへの最短経路</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>❤️ AEDナビ</h1>
+  <p>現在地から最も近いAEDへの徒歩ルートを表示します</p>
+</header>
+<main>
+  <aside id="panel">
+    <div class="emergency">🚑 緊急時はまず <strong>119番</strong> に通報してください</div>
+    <div class="controls">
+      <button id="btnLocate" class="primary">📍 現在地から探す</button>
+      <p class="hint">または地図をタップして出発地点を指定</p>
+      <label class="check"><input type="checkbox" id="onlyOpen" checked> 現在利用可能なAEDのみ</label>
+    </div>
+    <div id="status" role="status">AEDデータを読み込み中…</div>
+    <div id="result"></div>
+    <ol id="list"></ol>
+  </aside>
+  <div id="map"></div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
